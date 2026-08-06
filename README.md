@@ -103,7 +103,7 @@ Each solution focuses on:
 
 <a href="https://leetcode.com/Dhrubo-Dey">
 
-<img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/>
+<img src="https://img.shields.io/badge/LeetCode-Dhrubo--Dey-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/>
 
 </a>
 
