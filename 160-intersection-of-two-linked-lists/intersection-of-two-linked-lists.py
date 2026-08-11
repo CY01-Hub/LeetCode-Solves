@@ -8,31 +8,21 @@ class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
         p = headA
         q = headB
+        c = 0
 
-        a, b = 0, 0
-        while p.next != None:
-            a += 1
-            p = p.next
-        while q.next != None:
-            b += 1
-            q = q.next
+        while True:
+            if p == q:
+                return p
 
-        p = headA
-        q = headB
-
-        if a > b:
-            while a > b:
-                p = p.next
-                a -= 1
-        elif b > a:
-            while b > a:
-                q = q.next
-                b -= 1
-
-        while p != q:
             p = p.next
             q = q.next
-        
-        return p
-
             
+            if p == None:
+                c += 1
+                p = headB
+
+            if q == None:
+                q = headA
+
+            if c == 2:
+                return None
