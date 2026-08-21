@@ -16,7 +16,7 @@ A collection of my LeetCode solutions focused on improving
 
 ---
 
-# 📌 About This Repository
+# 📌 About This Repository :-
 
 This repository contains my solutions to LeetCode problems that I solve while improving my problem-solving skills and strengthening my understanding of Data Structures and Algorithms.
 
@@ -32,8 +32,7 @@ Each solution focuses on:
 
 ---
 
-# 🧠 Topics Covered
-
+# 🧠 Topics Covered :-
 
 <div align="center">
 
@@ -54,8 +53,7 @@ Each solution focuses on:
 
 ---
 
-# 🛠️ Languages Used
-
+# 🛠️ Languages Used :-
 
 <div align="center">
 
@@ -67,13 +65,9 @@ Each solution focuses on:
 
 </div>
 
-
-
-
 ---
 
-# 🎯 Goals
-
+# 🎯 Goals :-
 
 - [x] Build strong DSA fundamentals
 - [x] Practice coding consistently
@@ -81,25 +75,20 @@ Each solution focuses on:
 - [ ] Improve competitive programming skills
 - [ ] Solve 500+ LeetCode problems
 
-
 ---
 
-# 📚 Currently Improving
-
+# 📚 Currently Improving :-
 
 - Data Structures & Algorithms
 - Algorithm Optimization
 - Problem-Solving Patterns
 - Competitive Programming Techniques
 
-
 ---
 
-# 🔗 Connect
-
+# 🔗 Connect :-
 
 <div align="center">
-
 
 <a href="https://leetcode.com/Dhrubo-Dey">
 
@@ -107,16 +96,13 @@ Each solution focuses on:
 
 </a>
 
-
 <a href="https://github.com/CY01-Hub">
 
 <img src="https://img.shields.io/badge/GitHub-CY01--Hub-181717?style=for-the-badge&logo=github"/>
 
 </a>
 
-
 </div>
-
 
 ---
 
