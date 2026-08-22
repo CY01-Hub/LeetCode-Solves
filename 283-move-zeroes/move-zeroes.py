@@ -3,9 +3,13 @@ class Solution:
         if len(nums) == 0 or len(nums) == 1:
             return 
 
-        j = 0
+        pos = 0
         for i in range(len(nums)):
             if nums[i] != 0:
-                nums[i], nums[j] = nums[j], nums[i]
-                j += 1
+                nums[pos] = nums[i]
+                pos += 1
+        
+        while pos < len(nums):
+            nums[pos] = 0
+            pos += 1
         
