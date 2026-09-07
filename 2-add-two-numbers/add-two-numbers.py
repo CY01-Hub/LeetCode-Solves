@@ -4,36 +4,21 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def addTwoNumbers(self, h1: Optional[ListNode], h2: Optional[ListNode]) -> Optional[ListNode]:
-        ans = ListNode(0)
-        cary = 0
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+
+        pre_head = tail = ListNode(0)
+        carry = 0
         
-        p = h1
-        q = h2
-        r = ans
+        while l1 or l2 or carry:
+            val = (l1.val if l1 else 0) + (l2.val if l2 else 0) + carry
 
-        while p != None or q != None:
-            total = cary
-            cary = 0
+            carry, trail = divmod(val, 10)
 
-            if p != None:
-                total += p.val
-                p = p.next
+            tail.next = ListNode(trail)
+            tail = tail.next
 
-            if q != None:
-                total += q.val
-                q = q.next
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
 
-            if total > 9:
-                cary = 1
-                total -= 10
-
-            newNode = ListNode(total)
-            r.next = newNode
-            r = r.next
-        
-        if cary>0:
-            newNode = ListNode(cary)
-            r.next = newNode
-
-        return ans.next
+        return pre_head.next
+                
