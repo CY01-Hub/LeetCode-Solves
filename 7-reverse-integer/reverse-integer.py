@@ -1,14 +1,18 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        if x == 0:
-            return 0
+        
+        if(x>0):
+            x=str(x)
+            x=x[::-1]
+            
 
-        if x > 0:
-            result = int(str(x)[::-1])
         else:
-            result = -int(str(x)[1:][::-1])
+            x=abs(x)
+            x=str(x)
+            x=x[::-1]
+            x=int(x)-2*(int(x))
 
-        if result < -2**31 or result > 2**31 - 1:
-            return 0
-
-        return result
+        if (-2**31<= int(x) <=2**31-1):
+            return int(x)
+        return 0
+        
