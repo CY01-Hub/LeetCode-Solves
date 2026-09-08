@@ -3,18 +3,15 @@ class Solution:
         if num == 0:
             return "0"
 
-        neg = num < 0
-        num = abs(num)
-
-        result = ""
-
-        while num != 0:
-            result += str(num % 7)
-            num = num // 7
-
-        result = result[::-1]
-
-        if neg:
-            result = "-" + result
+        sign = "-" if num < 0 else ""
         
-        return result
+        num = abs(num)
+        
+        result = ""
+        
+        while num:
+            result = str(num % 7) + result
+            num //= 7
+        
+        return sign + result
+        
