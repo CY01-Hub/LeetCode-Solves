@@ -1,18 +1,24 @@
 class Solution:
     def search(self, n: List[int], t: int) -> int:
-        l, h = 0, len(n) - 1
-        while l <= h:
-            m = l + (h - l) // 2
-            if n[m] == t:
-                return m
-            if n[l] <= n[m]:
-                if n[l] <= t < n[m]:
-                    h = m - 1
+        low = 0
+        high = len(n) - 1
+
+        while low <= high:
+            mid = low + (high - low) // 2
+        
+            if n[mid] == t:
+                return mid
+        
+            if n[low] <= n[mid]:
+                if n[low] <= t < n[mid]:
+                    high = mid - 1
                 else:
-                    l = m + 1
+                    low = mid + 1
+        
             else:
-                if n[m] < t <= n[h]:
-                    l = m + 1
+                if n[mid] < t <= n[high]:
+                    low = mid + 1
                 else:
-                    h = m - 1
+                    high = mid - 1
+        
         return -1
