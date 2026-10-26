@@ -69,6 +69,7 @@ Each solution focuses on:
 
 # 🎯 Goals :-
 
+- [x] Achieving leetcode badges
 - [x] Build strong DSA fundamentals
 - [x] Practice coding consistently
 - [ ] Master advanced algorithms
