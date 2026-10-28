@@ -1,9 +1,16 @@
 class Solution:
     def findDuplicate(self, nums: list[int]) -> int:
-        n=len(nums)
-        check = [False]*(n+1)
-        for n in nums:
-            if check[n]:
-                return n
-            check[n]=True
-        return -1
+        ans = 0
+
+        for i in range(len(nums)):
+            n = abs(nums[i])
+            if nums[n] > 0 :
+                nums[n] = -nums[n]
+            else:
+                ans = n
+                break
+        
+        for i in range(len(nums)):
+            nums[i] = abs(nums[i])
+        
+        return ans
