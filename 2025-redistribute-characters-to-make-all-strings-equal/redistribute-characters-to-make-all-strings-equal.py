@@ -1,17 +1,4 @@
 class Solution:
-    def makeEqual(self, words: list[str]) -> bool:
-        count = {}
-
-        for word in words:
-            for w in word:
-                if w not in count:
-                    count[w] = 1
-                else:
-                    count[w] += 1
+    def makeEqual(self, w: list[str]) -> bool:
+        return all(''.join(w).count(ch) % len(w) == 0 for ch in set(''.join(w)))
         
-        for c in count:
-            if count[c] % len(words) != 0:
-                return False
-        
-        return True
-            
