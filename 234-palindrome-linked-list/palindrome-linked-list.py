@@ -4,19 +4,23 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        ans = []
-        curr = head
+    def isPalindrome(self, head: ListNode | None) -> bool:
+        if head.next is None:
+            return True
+
+        slow, fast = head, head
+        stack = []
+
+        while fast and fast.next is not None:
+            stack.append(slow.val)
+            slow, fast = slow.next, fast.next.next
         
-        while curr != None:
-            ans.append(curr.val)
-            curr = curr.next
+        if fast:
+            slow = slow.next
         
-        ptr = head
-        while ptr != None:
-            if ans[-1] != ptr.val:
+        while slow:
+            if slow.val != stack.pop():
                 return False
-            ptr = ptr.next
-            ans.pop()
+            slow = slow.next
         
         return True
