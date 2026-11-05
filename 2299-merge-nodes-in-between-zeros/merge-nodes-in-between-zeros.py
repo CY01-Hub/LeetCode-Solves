@@ -4,20 +4,23 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def mergeNodes(self, head: ListNode | None) -> ListNode | None:
-        dummy = ListNode(-1)
-        ans = dummy
-        curr = head.next
-        add = 0
+    def mergeNodes(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        head = head.next
+        curr = head
 
-        while curr != None:
-            if curr.val != 0:
-                add += curr.val
-            else:
-                temp = ListNode(add)
-                dummy.next = temp
-                dummy = dummy.next
-                add = 0
-            curr = curr.next
-
-        return ans.next
+        while curr.next is not None:
+            if curr.next.val == 0:
+                curr.next = curr.next.next
+                
+                if curr.next is None:
+                    break
+                
+                curr = curr.next
+                continue
+            
+            newVal = curr.val + curr.next.val
+            curr.next = curr.next.next
+            curr.val = newVal
+        
+        return head
+        
