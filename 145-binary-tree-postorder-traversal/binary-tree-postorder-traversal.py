@@ -7,7 +7,7 @@
 class Solution:
     def postorderTraversal(self, root: TreeNode | None) -> list[int]:
 
-        ans = []
+        answer = []
 
         def traverse(root):
             if root is None:
@@ -15,8 +15,8 @@ class Solution:
 
             traverse(root.left)
             traverse(root.right)
-            ans.append(root.val)
+            answer.append(root.val)
 
         traverse(root)
 
-        return ans
+        return answer
