@@ -49,11 +49,14 @@ class Solution:
         while q.size() > 0:
             l = q.size()
             level = []
+
             for i in range(l):
                 front = q.pop()
+            
                 if front.left != None:
                     q.push(front.left)
                     level.append(front.left.val)
+            
                 if front.right != None:
                     q.push(front.right)
                     level.append(front.right.val)
